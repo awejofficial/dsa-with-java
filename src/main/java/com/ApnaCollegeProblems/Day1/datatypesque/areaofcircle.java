@@ -1,4 +1,4 @@
-package com.datatypesque;
+package com.ApnaCollegeProblems.Day1.datatypesque;
 import java.util.*;
 
 public class areaofcircle {

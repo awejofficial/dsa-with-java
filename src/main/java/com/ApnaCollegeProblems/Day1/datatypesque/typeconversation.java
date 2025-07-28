@@ -1,4 +1,4 @@
-package com.datatypesque;
+package com.ApnaCollegeProblems.Day1.datatypesque;
 
 public class typeconversation {
      public static void main (String args[]){

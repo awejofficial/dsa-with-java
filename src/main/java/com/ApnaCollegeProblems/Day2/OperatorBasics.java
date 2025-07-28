@@ -1,4 +1,4 @@
-package com.JavaBasics.Day2;
+package com.ApnaCollegeProblems.Day2;
 import java.util.*;
 
 public class OperatorBasics {
