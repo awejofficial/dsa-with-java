@@ -1,6 +1,6 @@
 package com.ApnaCollegeProblems.Loops;
 
-public class helloworld {
+public class q1helloworld {
     //Question 1 : How many times 'Hello' is printed?
 
 
