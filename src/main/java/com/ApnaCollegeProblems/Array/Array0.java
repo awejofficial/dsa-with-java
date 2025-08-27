@@ -14,6 +14,8 @@ public class Array0 {
 
         int avg = (marks[0]+marks[1]+marks[2]+marks[3]) / 4;
         System.out.println("Average of the Student is: "+avg);
-
+        marks[2] = 100 /12;
+        System.out.println("Updated Marks: "+marks[2]);
+        System.out.println("Length of the Marks: "+marks.length);
     }
 }
