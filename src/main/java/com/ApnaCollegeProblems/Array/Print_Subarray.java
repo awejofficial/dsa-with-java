@@ -2,18 +2,18 @@ package com.ApnaCollegeProblems.Array;
 
 public class Print_Subarray {
     public static void printSubarrays(int numbers[]) {
-        int totSubArray = 0;
+        int ts = 0;
         for (int i = 0; i < numbers.length; i++) {
             for (int j = i; j < numbers.length; j++) {
                 for (int k = i; k <= j; k++) {
                     System.out.print(numbers[k] + " ");
                 }
-                totSubArray++;
+                ts++;
                 System.out.println();
             }
             System.out.println();
         }
-        System.out.println("Total number of subarrays: " + totSubArray);
+        System.out.println("Total number of subarrays: " + ts);
     }
 
     public static void main(String args[]) {
