@@ -14,7 +14,6 @@ public class maxSubArraySum {
                 for (int k = i; k <= j; k++) {
                     currSum += numbers[k];
                 }
-                
                 System.out.println("Sum of subarray from " + i + " to " + j + " is: " + currSum);
                 
                 // Update the maximum sum if the current subarray sum is greater
@@ -27,7 +26,7 @@ public class maxSubArraySum {
     }
     public static void main(String args[]){
         int numbers[] = {2,4,6,8,10};
-        maxSubArraySum(numbers);
+        maxSubarraySum(numbers);
     }
     
 }

@@ -1,0 +1,42 @@
+package com.ApnaCollegeProblems.Array;
+
+public class MaxSubarraySum_Prefix {
+
+    // Method to find the maximum subarray sum using the prefix sum approach
+    public static void maxSubarraySumPrefix(int numbers[]) {
+        int maxSum = Integer.MIN_VALUE;
+        int currSum;
+        
+        // 1. Create and populate the prefix sum array
+        int prefix[] = new int[numbers.length];
+        prefix[0] = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            prefix[i] = prefix[i-1] + numbers[i];
+        }
+        
+        // 2. Iterate through all possible subarrays and find the max sum
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i; j < numbers.length; j++) {
+                // Calculate the sum of the subarray from i to j using prefix sums
+                // Handle the special case where the subarray starts at index 0
+                if (i == 0) {
+                    currSum = prefix[j];
+                } else {
+                    currSum = prefix[j] - prefix[i-1];
+                }
+                
+                // Update maxSum if the current sum is greater
+                if (currSum > maxSum) {
+                    maxSum = currSum;
+                }
+            }
+        }
+        
+        System.out.println("Maximum Sum of the Subarray (using Prefix Sum) is: " + maxSum);
+    }
+
+    public static void main(String args[]) {
+        int numbers[] = {-2, 0, -6, 8, 10};
+        maxSubarraySumPrefix(numbers);
+    }
+}
