@@ -25,6 +25,9 @@ public class maxSubArraySum {
         }
         System.out.println("Maximum Sum of the Subarray is: " + maxSum);
     }
-    public static void main
+    public static void main(String args[]){
+        int numbers[] = {2,4,6,8,10};
+        maxSubArraySum(numbers);
+    }
     
 }
