@@ -1,7 +1,7 @@
 package com.ApnaCollegeProblems.Array;
 
 public class Trapped_Rainwaterexample {
-    publid static int (int height[]) {
+    public static int Trapped_Rainwater (int height[]) {
         int h = height.length;
 
         // left
@@ -13,13 +13,22 @@ public class Trapped_Rainwaterexample {
 
          // right
          int rightMax[] = new int[h];
-         rightMax[-1] = height[-1];
-         for (int i =h-2; i>=h; i--) {
-             rightMax[i] = Math.max(height[i], leftMax[i-1]);
+         rightMax[h-1] = height[h-1];
+         for (int i =h-2; i>=0; i--) {
+             rightMax[i] = Math.max(height[i], rightMax[i+1]);
          }
+
+         //Loop
+         int trappedWater =0;
+         for (int i=0;i<h;i++){
+            int waterLevel = Math.min(leftMax[i], rightMax[i]);
+            trappedWater += waterLevel - height[i];
+         }
+         return trappedWater;
     }
 
     public static void main(String[] args) {
         int height[] = {4, 2, 0, 6, 3, 2, 5};
+        System.out.println("Total Trapped Water: " + Trapped_Rainwater(height));
     }
 }
