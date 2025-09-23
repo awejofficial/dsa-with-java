@@ -40,7 +40,7 @@ mvn test
 
 ---
 
-## Project structure (actual)
+## Project structure (Ideal)
 
 Your project structure may differ slightly as this repo is being built while learning. A typical structure may look like this:
 
